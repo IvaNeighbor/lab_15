@@ -46,18 +46,27 @@ int main() {
 		int array[MAX_SIZE], n;
 		printf_s("Enter size of massive(not more than %d): ", MAX_SIZE);
 		scanf_s("%d", &n);
-		for (int i = 0; i < n; i++) {
-			if (array[i] % 2 == 0) {
-				array[i] = 0;
+		if (n < 100) {
+			for (int i = 0; i < n; i++) {
+				printf_s("arr[%d]: ", i);
+				scanf_s("%d", &array[i]);
 			}
-			else {
-				printf_s("There are no whole numbers");
+			for (int i = 0; i < n; i++) {
+				if (array[i] % 2 == 0) {
+					array[i] = 0;
+				}
 			}
+			for (int i = 0; i < n; i++) {
+				printf_s("%d ", array[i]);
+			}
+		}
+		else {
+			printf_s("Wrong array");
 		}
 	}
 		  break;
 	default:
-		printf_s("Wrong number");
+		printf_s("Wrong number size");
 	}
 	return 0;
 }
