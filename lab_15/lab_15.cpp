@@ -52,7 +52,7 @@ int main() {
 		scanf_s("%d", &n);
 		if (n < 100) {
 			for (int i = 0; i < n; i++) {
-				printf_s("arr[%d]: ", i);
+				printf_s("array[%d]: ", i);
 				scanf_s("%d", &array[i]);
 			}
 			for (int i = 0; i < n; i++) {
@@ -75,7 +75,7 @@ int main() {
 		scanf_s("%d", &n);
 		if (n < 100) {
 			for (int i = 0; i < n; i++) {
-				printf_s("arr[%d]: ", i);
+				printf_s("array[%d]: ", i);
 				scanf_s("%d", &array[i]);
 			}
 			for (int i = 0; i < n; i++) {
@@ -88,6 +88,24 @@ int main() {
 		}
 	}
 		  break;
+	case 5: {
+		int array[MAX_SIZE], n;
+		printf_s("Enter size of massive(not more than %d): ", MAX_SIZE);
+		scanf_s("%d", &n);
+		if (n < 100) {
+			for (int i = 0; i < n; i++) {
+				printf_s("array[% d]: ", i);
+				scanf_s("%d", &array[i]);
+			}
+			for (int i = n - 1; i >= 0; i--) {
+				printf_s("araay %d ", array[i]);
+			}
+		}
+		else {
+			printf_s("Wrong array size");
+		}
+	}
+		break;
 	default: 
 		printf_s("Wrong number size");
 	}
