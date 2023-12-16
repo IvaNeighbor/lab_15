@@ -134,6 +134,26 @@ int main() {
 		}
 	}
 		  break;
+	case 7: {
+		int array[MAX_SIZE], n, sum=0, array2[MAX_SIZE];
+		printf_s("Enter size of massive(not more than % d) : ", MAX_SIZE);
+		scanf_s("%d", &n);
+		if (n < 100) {
+			for (int i = 0; i < n; i++) {
+				printf_s("array[%d]", i);
+				scanf_s("%d", &array[i]);
+			}
+			for (int i = 0; i < n; i++) {
+				sum += array[i];
+				array2[i]=sum;
+				printf_s("array2 %d\n", array2[i]);
+			}
+		}
+		else {
+			printf_s("Wrong array size");
+		}
+	}
+		  break;
 	default: 
 		printf_s("Wrong number size");
 	}
