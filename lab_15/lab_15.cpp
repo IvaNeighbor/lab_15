@@ -13,6 +13,8 @@ int main() {
 	switch (number) {
 	case 1: {
 		int x, y;
+		printf_s("Enter value x and y\n");
+		scanf_s("%d %d", &x &y);
 		if (x > y) {
 			printf_s("The lagest number\n", x);
 		}
@@ -24,7 +26,20 @@ int main() {
 		}
 	}
 		  break;
-	case 2:
+	case 2: {
+		int x, y, z;
+		printf_s("Enter value x, y and z\n");
+		scanf_s("%d %d %d", &x & y & z);
+		if (x < y && x < z) {
+			printf("Min x");
+		}
+		if (y < x && y < z) {
+			printf("Min y");
+		}
+		if (z < x && z < y) {
+			printf("Min z");
+		}
+	}
 	default:
 		printf_s("Wrong number");
 	}
