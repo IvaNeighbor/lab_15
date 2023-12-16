@@ -7,6 +7,10 @@ int main() {
 	printf_s("1. A program that finds which number is greater between two.\n");
 	printf_s("2. A program that finds the smallest of three numbers.\n");
 	printf_s("3. A program that resets all even elements of the array to zero.\n");
+	printf_s("4. A program that calculates the sum of the elements of an integer array.\n");
+	printf_s("5. A program that displays array elements in reverse order.\n");
+	printf_s("6. A program to store the maximum and minimum values in an array.\n");
+	printf_s("7. The accumulation algorithm is an algorithm used to process data sets with the accumulation of a certain value.\n");
 	scanf_s("%d", &number);
 	switch (number) {
 	case 1: {
@@ -61,11 +65,30 @@ int main() {
 			}
 		}
 		else {
-			printf_s("Wrong array");
+			printf_s("Wrong array size");
 		}
 	}
 		  break;
-	default:
+	case 4: {
+		int array[MAX_SIZE], n, sum = 0;
+		printf_s("Enter size of massive(not more than %d): ", MAX_SIZE);
+		scanf_s("%d", &n);
+		if (n < 100) {
+			for (int i = 0; i < n; i++) {
+				printf_s("arr[%d]: ", i);
+				scanf_s("%d", &array[i]);
+			}
+			for (int i = 0; i < n; i++) {
+				sum += array[i];
+			}
+			printf_s("Result of sum %d", sum);
+		}
+		else {
+			printf_s("Wrong array size");
+		}
+	}
+		  break;
+	default: 
 		printf_s("Wrong number size");
 	}
 	return 0;
