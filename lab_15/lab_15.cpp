@@ -1,20 +1,32 @@
-﻿// lab_15.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
-
-int main()
-{
-    std::cout << "Hello World!\n";
+﻿#include <stdio.h>
+int main() {
+	int number;
+	printf_s("Press 1 or 2 or 3....or 7");
+	printf_s("1. A program that finds which number is greater between two.\n");
+	printf_s("2. A program that finds the smallest of three numbers.\n");
+	printf_s("3. A program that resets all even elements of the array to zero.\n");
+	printf_s("4. A program that calculates the sum of the elements of an integer array.\n");
+	printf_s("5. A program that displays array elements in reverse order.\n");
+	printf_s("6. A program to store the maximum and minimum values in an array.\n");
+	printf_s("7. The accumulation algorithm is an algorithm used to process data sets with the accumulation of a certain value.\n");
+	scanf_s("%d", &number);
+	switch (number) {
+	case 1: {
+		int x, y;
+		if (x > y) {
+			printf_s("The lagest number\n", x);
+		}
+		else {
+			printf_s("The lagest number\n", y);
+		}
+		if (x = y) {
+			printf_s("Value are the same\n", x, y);
+		}
+	}
+		  break;
+	case 2:
+	default:
+		printf_s("Wrong number");
+	}
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
