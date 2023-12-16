@@ -106,6 +106,34 @@ int main() {
 		}
 	}
 		break;
+	case 6: {
+		int array[MAX_SIZE], n, min, max;
+		printf_s("Enter size of massive(not more than %d): ", MAX_SIZE);
+		scanf_s("%d", &n);
+		if (n < 100) {
+			for (int i = 0; i < n; i++) {
+				printf_s("array[% d]: ", i);
+				scanf_s("%d", &array[i]);
+			}
+			min = array[0];
+			max = array[0];
+			for (int i = 0; i < n; i++) {
+				if (min > array[i]) {
+					min = array[i];
+				}
+			}
+			for (int i = 0; i < n; i++) {
+				if (max < array[i]) {
+					max = array[i];
+				}
+			}
+			printf_s("Min value: %d and Max value: %d", min, max);
+		}
+		else {
+			printf_s("Wrong array size");
+		}
+	}
+		  break;
 	default: 
 		printf_s("Wrong number size");
 	}
